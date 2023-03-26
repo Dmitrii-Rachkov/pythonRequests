@@ -1,0 +1,56 @@
+
+Метод POST
+Исходная URL метода POST:
+ https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Ответ POST:
+{"status":"OK","place_id":"c91f33496b2e2f4b6ec651a13a372af4","scope":"APP","reference":"7c446fdd9b0ecfb8ce8a1d0b2ae021517c446fdd9b0ecfb8ce8a1d0b2ae02151","id":"7c446fdd9b0ecfb8ce8a1d0b2ae02151"}
+Запрос прошёл успешно! Статус код: 200
+Все обязательные поля присутствуют.
+Значение поля status верно.
+
+Метод GET для проверки POST
+Исходная URL метода GET:
+ https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=c91f33496b2e2f4b6ec651a13a372af4
+Ответ GET:
+{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"29, side layout, cohen 09","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+Запрос прошёл успешно! Статус код: 200
+Все обязательные поля присутствуют.
+Значение поля address верно.
+
+Метод PUT
+Исходная URL метода PUT:
+ https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123
+Ответ PUT:
+{"msg":"Address successfully updated"}
+Запрос прошёл успешно! Статус код: 200
+Все обязательные поля присутствуют.
+Значение поля msg верно.
+
+Метод GET для проверки PUT
+Исходная URL метода GET:
+ https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=c91f33496b2e2f4b6ec651a13a372af4
+Ответ GET:
+{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"100 Lenina street, RU","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+Запрос прошёл успешно! Статус код: 200
+Все обязательные поля присутствуют.
+Значение поля address верно.
+
+Метод DELETE
+Исходная URL метода DELETE:
+ https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Ответ DELETE:
+{"status":"OK"}
+Запрос прошёл успешно! Статус код: 200
+Все обязательные поля присутствуют.
+Значение поля status верно.
+
+Метод GET для проверки DELETE
+Исходная URL метода GET:
+ https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=c91f33496b2e2f4b6ec651a13a372af4
+Ответ GET:
+{"msg":"Get operation failed, looks like place_id  doesn't exists"}
+Запрос прошёл успешно! Статус код: 404
+Все обязательные поля присутствуют.
+Значение поля msg верно.
+
+Тестирование создания, изменения, удаления локации в google maps api завершено
