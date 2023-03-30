@@ -29,15 +29,6 @@ jobs:
           pip3 install pytest
           pip3 install requests
         continue-on-error: true
-        
-
-  tests_run:
-  
-    runs-on: windows-latest
-    
-    needs: build
-    
-    steps:
       
       - name: Run API tests
         run: python -m pytest -s -v
@@ -47,7 +38,7 @@ jobs:
   
     runs-on: windows-latest
     
-    needs: tests_run 
+    needs: build 
     
     steps:
     
