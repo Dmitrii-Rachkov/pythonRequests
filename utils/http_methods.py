@@ -21,6 +21,7 @@ class Http_methods():
         with allure.step("Method GET"):
             Logger.add_request(url=url, method="GET")
             result = requests.get(url, headers=Http_methods.headers, cookies=Http_methods.cookie)
+            result.encoding = 'utf-8'
             Logger.add_response(result=result)
             return result
 
@@ -30,6 +31,7 @@ class Http_methods():
         with allure.step("Method POST"):
             Logger.add_request(url=url, method="POST")
             result = requests.post(url, json=body, headers=Http_methods.headers, cookies=Http_methods.cookie)
+            result.encoding = 'utf-8'
             Logger.add_response(result=result)
             return result
 
@@ -39,6 +41,7 @@ class Http_methods():
         with allure.step("Method PUT"):
             Logger.add_request(url=url, method="PUT")
             result = requests.put(url, json=body, headers=Http_methods.headers, cookies=Http_methods.cookie)
+            result.encoding = 'utf-8'
             Logger.add_response(result=result)
             return result
 
@@ -48,5 +51,6 @@ class Http_methods():
         with allure.step("Method DELETE"):
             Logger.add_request(url=url, method="DELETE")
             result = requests.delete(url, json=body, headers=Http_methods.headers, cookies=Http_methods.cookie)
+            result.encoding = 'utf-8'
             Logger.add_response(result=result)
             return result
