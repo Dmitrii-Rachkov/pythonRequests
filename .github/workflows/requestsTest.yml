@@ -40,9 +40,7 @@ jobs:
     steps:
       
       - name: Run API tests
-        run: |
-          cd tests
-          python -m pytest -s -v
+        run: python -m pytest -s -v
           
   
   upload_download_logs:
