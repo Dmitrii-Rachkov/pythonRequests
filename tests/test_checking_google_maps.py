@@ -11,7 +11,7 @@ class Test_place_cheking():
     @allure.description("Test CRUD of new location")
     def test_new_place(self):
 
-        print("\nМетод POST")
+        print("Метод POST")
         result_post = Google_maps_api.create_place()
         check_post = result_post.json()
         place_id = check_post.get("place_id")
