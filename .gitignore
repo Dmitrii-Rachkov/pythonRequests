@@ -5,3 +5,5 @@ __pycache__/
 # Игнорируем папку Lib
 Lib/
 
+# Игнорируем папку Scripts
+Scripts/
