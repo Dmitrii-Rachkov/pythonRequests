@@ -6,7 +6,7 @@ class Test_create_place():
     # Создание новой локации
     def test_create_new_place(self):
 
-        print("Метод POST")
+        # print("Метод POST")
         # result_post : Response = Google_maps_api.create_place() - устаревшая конструкция
         result_post = Google_maps_api.create_place()
         check_post = result_post.json()
