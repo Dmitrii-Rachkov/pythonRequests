@@ -1,0 +1,72 @@
+name: Run all tests API
+
+on: [push, workflow_dispatch]
+
+jobs: 
+
+  build:
+  
+    runs-on: windows-latest
+    
+    steps:
+      
+      - name: Get code from repository
+        uses: actions/checkout@v3
+        
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          architecture: 'x64'
+          
+      - name: Display Python version
+        run: python -V
+        
+      - name: Install tools
+        run: |
+          python -m pip install --upgrade pip
+          pip3 install pathlib
+          pip3 install pytest
+          pip3 install requests
+        continue-on-error: true
+        
+
+  tests_run:
+  
+    runs-on: windows-latest
+    
+    needs: build
+    
+    steps:
+      
+      - name: Run API tests
+        run: |
+          cd tests
+          python -m pytest -s -v
+          
+  
+  upload_download_logs:
+  
+    runs-on: windows-latest
+    
+    needs: tests_run 
+    
+    steps:
+    
+      - name: Upload logs
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-logs
+          path: logs/c
+          
+      - name: Download logs
+        uses: actions/download-artifact@v3
+        with:
+          name: my-logs
+    
+    
+        
+      
+          
+        
+    
