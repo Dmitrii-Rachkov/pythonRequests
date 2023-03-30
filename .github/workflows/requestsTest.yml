@@ -31,7 +31,9 @@ jobs:
         continue-on-error: true
       
       - name: Run API tests
-        run: python -m pytest -s -v
+        run: |
+          find . -name '*.pyc' -type f -delete
+          python -m pytest -s -v
         
   
   upload_download_logs:
