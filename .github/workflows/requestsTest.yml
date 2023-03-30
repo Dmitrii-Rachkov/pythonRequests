@@ -28,6 +28,7 @@ jobs:
           pip3 install pathlib
           pip3 install pytest
           pip3 install requests
+          pip3 install allure-pytest
         continue-on-error: true
       
       - name: Run API tests
