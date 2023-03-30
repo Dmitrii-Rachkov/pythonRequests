@@ -29,25 +29,16 @@ jobs:
           pip3 install pytest
           pip3 install requests
         continue-on-error: true
-        
-
-  tests_run:
-  
-    runs-on: windows-latest
-    
-    needs: build
-    
-    steps:
       
       - name: Run API tests
         run: python -m pytest -s -v
-          
+        
   
   upload_download_logs:
   
     runs-on: windows-latest
     
-    needs: tests_run 
+    needs: build 
     
     steps:
     
@@ -55,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-logs
-          path: logs/c
+          path: logs/
           
       - name: Download logs
         uses: actions/download-artifact@v3
