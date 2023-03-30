@@ -33,6 +33,7 @@ class Google_maps_api():
         post_url = base_url + post_resource + key
         print(f'Исходная URL метода POST:\n {post_url}')
         result_post = Http_methods.post(url=post_url, body=json_create_place)
+        result_post.encoding = 'utf-8'
         print(f'Ответ POST:\n{result_post.text}')
         return result_post
 
@@ -46,6 +47,7 @@ class Google_maps_api():
         get_url = base_url + get_resource + key + "&place_id=" + place_id
         print(f'Исходная URL метода GET:\n {get_url}')
         result_get = Http_methods.get(url=get_url)
+        result_get.encoding = 'utf-8'
         print(f'Ответ GET:\n{result_get.text}')
         return result_get
 
@@ -64,6 +66,7 @@ class Google_maps_api():
             "key": "qaclick123"
         }
         result_put = Http_methods.put(url=put_url, body=json_update_location)
+        result_put.encoding = 'utf-8'
         print(f'Ответ PUT:\n{result_put.text}')
         return result_put
 
@@ -80,6 +83,7 @@ class Google_maps_api():
             "place_id": place_id
         }
         result_delete = Http_methods.delete(url=delete_url, body=json_delete_location)
+        result_delete.encoding = 'utf-8'
         print(f'Ответ DELETE:\n{result_delete.text}')
         return result_delete
 
