@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from utils.api import Google_maps_api
 from utils.checking import Checking
 import allure
