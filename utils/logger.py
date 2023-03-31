@@ -7,7 +7,7 @@ from pathlib import Path
 
 class Logger():
     file_name = "log_" + str(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")) + ".log"
-    path = Path(pathlib.Path.cwd().parent, 'logs', file_name)
+    path = Path(pathlib.Path.cwd().parent, 'pythonRequests', 'logs', file_name)
 
     @classmethod
     def write_log_to_file(cls, data: str):
