@@ -1,8 +1,4 @@
-# -*- coding: utf-8 -*-
-# coding: utf8
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+## -*- coding: utf-8 -*-
 from utils.api import Google_maps_api
 from utils.checking import Checking
 import allure
