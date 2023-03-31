@@ -1,5 +1,6 @@
 from utils.http_methods import Http_methods
-
+import win_unicode_console
+win_unicode_console.enable()
 
 """Методы для тестирования google maps api"""
 

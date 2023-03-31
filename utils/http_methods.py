@@ -1,3 +1,5 @@
+import win_unicode_console
+win_unicode_console.enable()
 import allure
 import requests
 from utils.logger import Logger
