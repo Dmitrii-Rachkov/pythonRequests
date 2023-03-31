@@ -1,6 +1,4 @@
 from utils.http_methods import Http_methods
-import win_unicode_console
-win_unicode_console.enable()
 
 """Методы для тестирования google maps api"""
 
@@ -35,7 +33,7 @@ class Google_maps_api():
         print(f'Исходная URL метода POST:\n {post_url}'.encode('utf-8'))
         result_post = Http_methods.post(url=post_url, body=json_create_place)
         result_post.encoding = 'utf-8'
-        print(f'Ответ POST:\n{result_post.text}'.encode('utf-8'))
+        print(f'Ответ POST:\n{result_post.text}'.encode())
         return result_post
 
 

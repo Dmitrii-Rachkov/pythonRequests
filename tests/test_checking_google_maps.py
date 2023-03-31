@@ -1,5 +1,3 @@
-import win_unicode_console
-win_unicode_console.enable()
 from utils.api import Google_maps_api
 from utils.checking import Checking
 import allure
