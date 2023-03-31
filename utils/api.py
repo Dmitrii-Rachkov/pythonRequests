@@ -30,8 +30,7 @@ class Google_maps_api():
 
         post_resource = "/maps/api/place/add/json"   # Ресурс метода post
         post_url = base_url + post_resource + key
-        comment = f'Исходная URL метода POST:\n {post_url}'.encode('utf-8')
-        print(comment.decode('utf-8'))
+        print(f'Исходная URL метода POST:\n {post_url}')
         result_post = Http_methods.post(url=post_url, body=json_create_place)
         result_post.encoding = 'utf-8'
         print(f'Ответ POST:\n{result_post.text}'.encode())
