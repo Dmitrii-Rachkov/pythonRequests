@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-logs
-          path: pythonRequests/logs/
+          path: ./pythonRequests/logs/
           
       - name: Download logs
         uses: actions/download-artifact@v3
