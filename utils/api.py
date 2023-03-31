@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# coding: utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 from utils.http_methods import Http_methods
 
 
