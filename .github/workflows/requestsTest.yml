@@ -33,7 +33,7 @@ jobs:
       
       - name: Run API tests
         run: |
-          -X utf8PYTHONUTF8-X utf8PYTHONUTF8=1
+          -X utf8PYTHONUTF8
           python -Bc "for p in __import__('pathlib').Path('.').rglob('*.py[co]'): p.unlink()"
           python -Bc "for p in __import__('pathlib').Path('.').rglob('__pycache__'): p.rmdir()"
           python -m pytest -s -v
