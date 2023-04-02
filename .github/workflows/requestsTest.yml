@@ -10,10 +10,10 @@ jobs:
     
     steps:
 
-      - shell: pwsh
+      - shell: powershell
         run: |
-          "mypath" >> $env:GITHUB_PATH
-          "{environment_variable_name}={value}" >> $env:GITHUB_ENV
+          "mypath" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+          "{environment_variable_name}={value}" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
 
       - name: Get code from repository
         uses: actions/checkout@v3
