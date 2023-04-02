@@ -13,6 +13,7 @@ jobs:
       - shell: pwsh
         run: |
           "mypath" >> $env:GITHUB_PATH
+          "{environment_variable_name}={value}" >> $env:GITHUB_ENV
 
       - name: Get code from repository
         uses: actions/checkout@v3
